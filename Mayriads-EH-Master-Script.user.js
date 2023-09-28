@@ -2462,7 +2462,7 @@
         div.mi1 { display: flex; justify-content: center; height: 20px; padding: 5px 0 3px 0; }
         div.mi2, div.mi3 { position: absolute; float: unset; opacity: 0; transition-duration: 0.3s; }
         div.mi1:hover > div.mi2, div.mi1:hover > div.mi3 { opacity: 1; }
-        div.mi2 { left: 0; }direction:ltr; 
+        div.mi2 { left: 0; }
         div.mi3 { right: 0; }
         div.mi4 { max-width: calc(100% - 10px); top: unset; left: unset; white-space: nowrap; overflow: hidden;
           text-overflow: ellipsis; }`
