@@ -2454,7 +2454,7 @@
     if (shortcuts.mpsModeEnabled) {
       fitMpvStyles = `
         /* stretch to fill screen */
-        div.mi0, img[id ^= "imgsrc_"] { height: calc(100vh - 2px) !important; width: auto !important; }
+        div.mi0, img[id ^= "imgsrc_"] { height: calc(100vh - 2px) !important; width: auto !important; direction:ltr; }
         /* maintain aspect ratio and fit to screen */
         img[id ^= "imgsrc_"] { object-fit: contain; max-width: 100%; }
         /* remove default width limit and reposition the text and buttons below the image */
@@ -2462,14 +2462,14 @@
         div.mi1 { display: flex; justify-content: center; height: 20px; padding: 5px 0 3px 0; }
         div.mi2, div.mi3 { position: absolute; float: unset; opacity: 0; transition-duration: 0.3s; }
         div.mi1:hover > div.mi2, div.mi1:hover > div.mi3 { opacity: 1; }
-        div.mi2 { left: 0; }
+        div.mi2 { left: 0; }direction:ltr; 
         div.mi3 { right: 0; }
         div.mi4 { max-width: calc(100% - 10px); top: unset; left: unset; white-space: nowrap; overflow: hidden;
           text-overflow: ellipsis; }`
     } else {
       fitMpvStyles = `
         /* stretch to fill screen */
-        div.mi0, img[id ^= "imgsrc_"] { height: calc(100vh - 2px) !important; width: 100% !important; }
+        div.mi0, img[id ^= "imgsrc_"] { height: calc(100vh - 2px) !important; width: 100% !important; direction:ltr; }
         /* maintain aspect ratio and fit to screen */
         img[id ^= "imgsrc_"] { object-fit: contain; }
         /* remove default width limit and reposition the text and buttons below the image */
@@ -2480,7 +2480,7 @@
     let persistentStyles = `
       /* remove top and bottom borders inside the image pane */
       body { padding: 0px 2px; }
-      #pane_images { height: 100vh !important; }
+      #pane_images { height: 100vh !important; direction:rtl; }
       /* button styles */
       #toggleButtonHost { display: flex; justify-content: center; }
       #toggleFitButton { width: 155px; min-height: 25px; height: 25px; position: fixed; bottom: 2vh;
